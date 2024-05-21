@@ -1,23 +1,27 @@
-Form{
+.input-form{
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
+
 .btn{
     border: 2px solid rgb(255, 255, 255);
     border-radius: 5px;
     padding: 5px 15px;
-    background-color: rgb(97, 130, 202);
+    //background-color: rgb(97, 130, 202);
     color: white;
     font-weight: 400;
     font-size: 16px;
+    box-sizing: border-box;
+  
 }
 
-
-.change{
+.add-todo{
     background-color: rgb(63, 150, 85);
+    min-width: 180px;
 }
+
 
 .field{
-    width: 500px;
+    width: 100%;
 }

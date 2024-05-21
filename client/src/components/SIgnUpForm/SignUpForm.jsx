@@ -33,14 +33,14 @@ export default function SignUpForm({ handleSignUp }) {
         {({ errors }) => (
           <Form>
             <p>
-              {errors.login && (<span className='error'>{errors.login}</span>)}
+              {errors.login && (<div className='error'>{errors.login}</div>)}
               <Field
                 name="login"
                 placeholder="Login"
               />
             </p>
             <p>
-              {errors.password && <span className='error'>{errors.password}</span>}
+              {errors.password && <div className='error'>{errors.password}</div>}
               <Field
                 name="password"
                 type="password"

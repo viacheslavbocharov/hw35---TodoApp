@@ -1,9 +1,9 @@
 import axios from "axios";
 import { API_TODOS, API_URL, API_DELETE, API_UPDATE } from "../../urls";
 import { Formik, Field, Form } from "formik";
-import './TodosForm.scss';
+import './AddTodoItemForm.scss';
 
-export default function TodosForm({ token, setTodos }) {
+export default function AddTodoItemForm({ token, setTodos }) {
     return (
         <Formik
             initialValues={({
@@ -26,9 +26,9 @@ export default function TodosForm({ token, setTodos }) {
                 setTodos(data)
             }}
         >
-            <Form>
+            <Form className="input-form">
                 <Field className="field" name="value" placeholder="Enter new todo value" />
-                <input className="btn change" type="submit" value="Add todo" />
+                <input className="btn add-todo" type="submit" value="Add todo" />
             </Form>
         </Formik>
     )

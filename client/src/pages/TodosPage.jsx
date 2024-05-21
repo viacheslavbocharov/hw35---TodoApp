@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { API_TODOS, API_URL, API_DELETE, API_UPDATE } from "../urls";
 import TodoList from "../components/TodoList/TodoList";
-import TodosForm from "../components/TodosForm/TodosForm";
+import AddTodoItemForm from "../components/AddTodoItemForm/AddTodoItemForm";
 import './TodosPage.scss';
 
 export default function TodosPage({ token }) {
@@ -42,7 +42,7 @@ export default function TodosPage({ token }) {
       <h2>Things to do:</h2>
       {!todos.length && (<p>No todos available</p>)}
       {!!todos.length && <TodoList values={todos} deleteTodo={deleteTodo} token={token} setTodos={setTodos} />}
-      <TodosForm token={token} setTodos={setTodos}/>
+      <AddTodoItemForm token={token} setTodos={setTodos}/>
     </div>
   )
 }
